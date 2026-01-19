@@ -1,0 +1,204 @@
+[data-theme="light"] {
+
+    .btn-option,
+    .option-selected,
+    #proccess,
+    .btn-sele,
+    .form-field input {
+        color: #C8CBCC;
+    }
+
+}
+
+.hidden-section {
+    display: none;
+}
+
+.heroPresentation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.heroPresentation h2 {
+    font-size: var(--font-size-m);
+    font-weight: normal;
+}
+
+
+
+
+
+.btn-sele,
+.selected {
+    border-bottom-left-radius: 10px;
+    border: 0.6px solid var(--accent);
+    border-right: none;
+    border-top: none;
+    background-color: var(--navy-lighter);
+    color: var(--text);
+    font-size: var(--font-size-xs);
+    height: 39px;
+    width: 136px;
+    text-align: left;
+    margin: 4px;
+}
+
+.btn-sele:hover,
+.selected {
+    color: var(--accent);
+    background: linear-gradient(90deg, var(--header-top), var(--dark-blue-lighter));
+}
+
+.encrypt,
+.decrypt,
+.hash {
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    background-color: var(--dark-blue-lighter);
+    font-weight: light;
+    transition: background-color .4s ease;
+}
+
+
+
+
+[data-theme="light"] {
+
+    .encrypt,
+    .decrypt,
+    .hash {
+        background: #eae6d8;
+        color: #022F5D;
+    }
+}
+
+.inside {
+    border-radius: 20px;
+    border: .2px solid var(--accent);
+    padding: 20px;
+
+}
+
+[data-theme="light"] {
+    .inside {
+        border: .2px solid var(--accent);
+    }
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    font-size: var(--font-size-s);
+}
+
+
+
+
+.encrypt-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.encrypt-form-inside {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.inside input,
+.inside input:active {
+    background-color: var(--stroke);
+    border: .3px solid var(--accent);
+    border-radius: 10px;
+    color: var(--text);
+    height: 35px;
+}
+
+.btn-option,
+.option-selected {
+    height: 35px;
+    border: 1px solid var(--accent);
+    color: var(--text);
+    font-size: var(--font-size-xs);
+}
+
+.btn-option {
+    background-color: var(--header-bottom);
+}
+
+
+.option-selected,
+.btn-option:hover {
+    background-color: #022F5D;
+}
+
+.option-not-selected {
+    display: none;
+}
+
+#proccess {
+    border-radius: 10px;
+    min-height: 35px;
+    max-width: 15%;
+    align-items: center;
+    color: var(--text);
+    background-color: #001f31;
+    border: .3px solid var(--accent);
+    font-size: var(--font-size-xs);
+}
+
+#proccess:hover {
+    background: linear-gradient(#022F5D, var(--header-bottom));
+}
+
+.result {
+    margin-top: 10px;
+    border-top: .3px dashed var(--text);
+}
+
+.result-info {
+    display: flex;
+    gap: 3px;
+    align-items: center;
+}
+
+.result-show {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.result-done {
+    background-color: var(--stroke);
+    padding: 5px;
+}
+
+#user-help {
+    color: orange;
+    font-size: var(--font-size-xs);
+    opacity: .7;
+}
+
+.copy {
+    background-color: #001f31;
+    border: .1px solid var(--accent);
+    border-radius: 50%;
+}
+
+.copy img{
+    height: 20px;
+    width: 20px;
+}
+
+.copied{
+    position: absolute;
+    background-color: #001f31;
+    color: red;
+    left: 2px;
+    bottom: 3px;
+}

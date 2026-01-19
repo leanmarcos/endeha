@@ -1,0 +1,42 @@
+:root {
+
+  --font-size-l: 32px;
+  --font-size-m: 24px;
+  --font-size-s: 16px;
+  --font-size-xs: 14px;
+
+  --primary: #0F172A;
+  --text: #C8CBCC;
+  --header-top: #011020;
+  --header-bottom: #001F3F;
+  --accent: #00D0FF;
+  --navy-lighter: #02172E;
+  --dark-blue-lighter: #11192C;
+  --stroke: #1F2937;
+
+}
+
+[data-theme="light"] {
+  --primary: #E6E2D2;
+  --text: #02172E;
+  --primary-lighter: #DDDACB;
+}
+
+
+body {
+  margin: 0px;
+  background-color: var(--primary);
+  color: var(--text);
+  font-family: "Inter", sans-serif;
+  transition: background-color .4s ease;
+}
+
+.content {
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+button {
+  cursor: pointer;
+}
+
