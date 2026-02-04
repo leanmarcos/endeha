@@ -7,7 +7,7 @@ export function SwitchMode() {
 
 
     imgMode.setAttribute('id', 'mode-img');
-    lock.setAttribute('id' , 'lock-result');
+    lock.setAttribute('id', 'lock-result');
 
     imgMode.src = currentMode === 'dark' ? '/darkmode.png' : '/lightmode.png';
     lock.src = currentMode === 'dark' ? '/dark-encrypt-result.png' : '/encrypt-result.png';
@@ -15,27 +15,29 @@ export function SwitchMode() {
     document.documentElement.setAttribute('data-theme', newMode);
 }
 
-// En tu archivo JavaScript
-window.addEventListener('scroll', function() {
-  const scrollY = window.scrollY; // Posición actual del scroll
-  const scrollHeight = document.documentElement.scrollHeight; // Altura total del contenido
-  const clientHeight = document.documentElement.clientHeight; // Altura de la ventana
+/*
+let isScrolled = false;
+const minPixels = 30;
 
-  // Evitar división por cero al inicio
-  if (scrollHeight > clientHeight) {
-    const progress = (scrollY / (scrollHeight - clientHeight)) * 100;
+window.addEventListener('scroll', () => {
+    const scrollHeight = document.documentElement.scrollHeight;
+    const clientHeight = document.documentElement.clientHeight;
 
-    console.log(progress);
-    
+    if (scrollHeight <= clientHeight) return;
+
     const header = document.querySelector('.headerBottom');
     const headerTop = document.querySelector('.headerTop');
 
-    /*
-    if(progress > 30){
+    if (window.scrollY > minPixels && !isScrolled) {
         header.classList.add('header-bottom-scroll');
         headerTop.classList.add('header-top-scroll');
+        isScrolled = true;
     }
 
-   */
-  }
+    if (window.scrollY < minPixels && isScrolled) {
+        header.classList.remove('header-bottom-scroll');
+        headerTop.classList.remove('header-top-scroll');
+        isScrolled = false;
+    }
 });
+*/

@@ -1,21 +1,25 @@
 import './App.css';
 import Header from './components/header/header.jsx';
-import MainHero from './components/mainHome/mainHome';
-import cypherInfo from './components/cypherInfo/cypherInfo.jsx';
+import MainHero from './components/mainHero/mainHero.jsx';
+import Core from './components/Core/Core.jsx';
 import Footer from './components/footer/footer.jsx';
 
 function App() {
 
   return (
     <>
-      <header>
+      <header className='header'>
         <Header />
       </header>
 
+      <main className="mainHero">
+        <MainHero />
+      </main>
+
       <div className="content">
 
-        <main className='mainHero'>
-          <MainHero />
+        <main className='core' id='core'>
+          <Core />
         </main>
 
         <section>
