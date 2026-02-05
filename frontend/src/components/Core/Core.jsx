@@ -5,7 +5,7 @@ import { useState } from 'react'
 export default function Core() {
 
     const [action, changeAction] = useState('encrypt');
-    const [selected, changeSelect] = useState('cesar');
+    const [selected, changeSelect] = useState('caesar');
     const [messageUser, changeMessage] = useState('');
     const [keyUser, changeKey] = useState('');
     const [result, changeResult] = useState('');
@@ -38,7 +38,7 @@ export default function Core() {
     }
 
     const description = {
-        cesar: action === 'encrypt' ? 'Shift each letter of the original text a fixed number of positions in the alphabet' : 'Reverse the shift to recover the original message',
+        caesar: action === 'encrypt' ? 'Shift each letter of the original text a fixed number of positions in the alphabet' : 'Reverse the shift to recover the original message',
         atbash: 'It reverses the alphabetm, no need for a key.',
         vignere: 'Use a keyword to shift each letter variably. Safer than Caesar',
         transposition: 'Arrange the letters of the message according to a numerical pattern (columns)',
@@ -64,16 +64,8 @@ export default function Core() {
     const copyResult = () => {
         setIsCopied(true);
         try {
-            navigator.clipboard.writeText(result);
-            const copied = document.getElementById('copy-btn');
-            const copyLogo = document.getElementById('copy-result');
+            navigator.clipboard.writeText(result);            
 
-
-            setTimeout(() => {
-                copied.innerHTML = 'COPIED';
-                copyLogo.src = '/copied.svg';
-
-            }, 500)
         } catch (error) {
             console.log(error);
         }
@@ -83,7 +75,7 @@ export default function Core() {
         changeMessage(`${tempText}`);
         changeError('');
         changeErrorField('');
-
+        setIsCopied(false);
     }
 
     const connectAPI = async () => {
@@ -105,11 +97,12 @@ export default function Core() {
                 changeError(data.message);
                 changeErrorField(data.field);
                 changeMessage('');
-
+            
 
                 throw new Error(data);
             }
 
+            setIsCopied(false);
 
             const success = data.success
             console.log("Respuesta del servidor:", data);
@@ -173,7 +166,7 @@ export default function Core() {
                         <div className={action === 'hash' || selected === 'atbash' ? 'noKey' : "coreAdditional"}>
 
                             <div className="amount">
-                                <label htmlFor="" className={action === 'hash' || selected === 'atbash' ? 'hidden' : 'coreFormField'}>Encryption key <input className={errorField === 'key' ? 'error-form' : ''} type={selected === 'cesar' ? "number" : "text"} id='key' onChange={(e) => changeKey(e.target.value)}  /></label>
+                                <label htmlFor="" className={action === 'hash' || selected === 'atbash' ? 'hidden' : 'coreFormField'}>Encryption key <input className={errorField === 'key' ? 'error-form' : ''} type={selected === 'caesar' ? "number" : "text"} id='key' onChange={(e) => changeKey(e.target.value)} /></label>
                                 <p className={errorField === 'key' ? 'error' : 'hidden'}>{error}</p>
                             </div>
 
