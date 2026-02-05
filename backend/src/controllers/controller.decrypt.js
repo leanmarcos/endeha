@@ -1,10 +1,10 @@
 import {emptyInput, isWord, isNumber} from '../middlewares/middlewares.generals.js';
 import {} from '../middlewares/middlewares.decrypt.js';
 import {cleanText} from '../utils/utils.general.js';
-import {cesarDecrypt} from '../services/services.decrypt.js';
+import {caesarDecrypt} from '../services/services.decrypt.js';
 import { sendError } from '../utils/utils.error.js';
 
-export const cesarHandler = (req, res) => {
+export const caesarHandler = (req, res) => {
      const body = req.body;
     const encriptedMessage = body.message;
     const key = body.key;
@@ -27,7 +27,7 @@ export const cesarHandler = (req, res) => {
 
     const fullEncryptedMessage = cleanText(encriptedMessage);
 
-    const result = cesarDecrypt(fullEncryptedMessage, shift);
+    const result = caesarDecrypt(fullEncryptedMessage, shift);
 
 
     res.status(200).json({

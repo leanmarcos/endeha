@@ -1,5 +1,5 @@
 
-export function cesarDecrypt(message, shift) {
+export function caesarDecrypt(message, shift) {
     const base = 97;
 
     let result = '';

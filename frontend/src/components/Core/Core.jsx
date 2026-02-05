@@ -24,8 +24,8 @@ export default function Core() {
 
 
     const options = {
-        encrypt: ['cesar', 'atbash', 'vignere', 'transposition'],
-        decrypt: ['cesar'],
+        encrypt: ['caesar', 'atbash', 'vignere', 'transposition'],
+        decrypt: ['caesar'],
         hash: ['md5', 'sha256']
     };
 

@@ -1,13 +1,13 @@
 import express from 'express';
 import { containsComma, containsRepeated, notSorted, startsWith1 } from '../middlewares/middlewares.encrypt.js';
-import { turnToCesar, turnToAtbash, turnToVigenere, turnToTransposition } from '../services/services.encrypt.js';
+import { turnToCaesar, turnToAtbash, turnToVigenere, turnToTransposition } from '../services/services.encrypt.js';
 import { emptyInput, isWord, isNumber } from '../middlewares/middlewares.generals.js';
 import { sendError } from '../utils/utils.error.js';
 import { cleanText } from '../utils/utils.general.js';
 
 
 
-export const cesarHandler = (req, res) => {
+export const caesarHandler = (req, res) => {
     const data = req.body;
     const original_message = data.message;
     const amount_pos = data.key;
@@ -33,7 +33,7 @@ export const cesarHandler = (req, res) => {
         return sendError(res, 'ONLY_NUMBERS', 'key');
     }
 
-    const result = turnToCesar(fullmessage, shift);
+    const result = turnToCaesar(fullmessage, shift);
 
     res.status(200).json({
         success: `${result}`

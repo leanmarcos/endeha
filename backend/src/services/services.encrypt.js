@@ -1,4 +1,4 @@
-export function turnToCesar(message, shift) {
+export function turnToCaesar(message, shift) {
     
     let new_text = ' ';
 

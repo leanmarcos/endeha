@@ -1,10 +1,10 @@
 import express from 'express';
-import { cesarHandler, atbashHandler, vigenereHandler, transpositionHandler } from '../controllers/controller.encrypt.js';
+import { caesarHandler, atbashHandler, vigenereHandler, transpositionHandler } from '../controllers/controller.encrypt.js';
 const router = express.Router();
 
-router.post('/cesar', cesarHandler);
+router.post('/caesar', caesarHandler);
 router.post('/atbash' , atbashHandler);
-router.post('/vignere' , vigenereHandler);
+router.post('/vigenere' , vigenereHandler);
 router.post('/transposition' , transpositionHandler);
 
 export default router;
