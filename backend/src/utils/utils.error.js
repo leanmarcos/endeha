@@ -39,6 +39,10 @@ const errorList = {
     SERVER_ERROR: {
         status: 500,
         message: 'Internal server error'
+    },
+    UNEXPECTED_ERROR: {
+        status: 500,
+        message: "We're sorry, something went wrong. We'll work it out"
     }
 }
 

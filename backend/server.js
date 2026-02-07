@@ -1,7 +1,8 @@
 import app from './app.js';
 
-const PORT = 3000;
+const PORT = process.env.DEFAULT_PORT || 3000;
 
 app.listen(PORT,  () => {
     console.log(`listening on port ${PORT}`);
+    console.log('variable .env: ' + process.env.DEFAULT_PORT);
 })

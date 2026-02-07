@@ -54,3 +54,11 @@ export const validateTextKey = (req, res, next) => {
 
     next();
 }
+
+export const middleware404 = (req, res) => {
+    return sendError(res, 'NOT_FOUND', null);
+}
+
+export const errorHandler = (err, req, res, next) => {
+    return sendError(res, 'UNEXPECTED_ERROR' , null);
+}
