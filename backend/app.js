@@ -10,9 +10,9 @@ const app = express();
 app.use(express.json());
 app.use(cors({
     origin: [
-        'http://localhost:5173',  // Para desarrollo local (Vite)
-        'http://localhost:3000',  // Para desarrollo local (React)
-        'https://tu-frontend-xyz789.onrender.com'  // Tu frontend en producción
+        'http://localhost:5173',  
+        'http://localhost:3000',  
+        'https://endehafront.onrender.com/'  
     ],
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization'],
