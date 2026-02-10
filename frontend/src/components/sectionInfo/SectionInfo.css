@@ -1,0 +1,26 @@
+.sectionInfoHeader{
+    text-align: center;
+}
+
+.sectionInfoHeader p{
+    text-align: center;
+}
+
+.box{
+    display: grid;
+    grid-template-columns: max-content;
+}
+
+.infoBox{
+    border-image: linear-gradient(90deg, var(--accent-cyan) , var(--accent-magenta) , var(--accent-magenta-dark)) 1;
+    border-width: .7px;
+    border-style: solid;
+    padding: .5rem;
+    margin: .5rem;
+    background: radial-gradient(at center, var(--primary-blue) , var(--complementary-blue-dark) 60%);
+}
+
+.infoBox p{
+    font-size: var(--font-size-xs);
+    opacity: .9;
+}

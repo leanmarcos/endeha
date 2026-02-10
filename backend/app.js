@@ -4,9 +4,6 @@ import cors from 'cors';
 import hashRoutes from './src/routes/routes.hash.js';
 import encryptRoutes from './src/routes/routes.encrypt.js';
 import decryptRoutes from './src/routes/routes.decrypt.js';
-import connect from './src/db/db.js';
-
-connect();
 
 const app = express();
 

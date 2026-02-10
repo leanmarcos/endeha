@@ -1,6 +1,6 @@
 import express from 'express';
 import {MD5handler, SHA256Handler} from '../controllers/controller.hash.js';
-import {validateMessage, middleware404, errorHandler, validateMessage} from '../middlewares/middlewares.generals.js'
+import {validateMessage, middleware404, errorHandler} from '../middlewares/middlewares.generals.js'
 
 const router = express.Router();
 

@@ -1,10 +1,11 @@
 .coreTitle {
-    font-size: var(--font-size-xxl);
+    font-size: var(--font-size-xl);
 }
 
 @media (min-width:768px) {
     .coreTitle {
         font-size: var(--font-size-xl);
+       
     }
 }
 
@@ -12,6 +13,7 @@
     font-size: var(--font-size-m);
     color: var(--primary-white-light);
     font-weight: 200;
+    margin-top: -10px;
 }
 
 [data-theme="light"] {
@@ -143,7 +145,7 @@
 
 
 .introTitle {
-    font-size: var(--font-size-xl);
+    font-size: var(--font-size-m);
     font-weight: 500;
 }
 
@@ -156,6 +158,7 @@
 .introSubtitle {
     font-size: var(--font-size-s);
     font-weight: 200;
+    margin-top: -15px;
 }
 
 @media (min-width: 768px) {
@@ -307,10 +310,15 @@
     transition: .5s;
 }
 
+[data-theme = "light"] #heroCTA{
+     border-width: 3px;
+}
+
 @media (min-width: 768px) {
     #coreCTA {
         height: 35px;
         font-size: var(--font-size-xs);
+        border-width: .7px;
     }
 }
 

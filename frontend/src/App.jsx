@@ -2,6 +2,7 @@ import './App.css';
 import Header from './components/header/header.jsx';
 import MainHero from './components/mainHero/mainHero.jsx';
 import Core from './components/Core/Core.jsx';
+import SectionInfo from './components/sectionInfo/SectionInfo.jsx';
 import Footer from './components/footer/footer.jsx';
 
 function App() {
@@ -12,9 +13,11 @@ function App() {
         <Header />
       </header>
 
+
       <main className="mainHero">
         <MainHero />
       </main>
+     
 
       <div className="content">
 
@@ -22,12 +25,10 @@ function App() {
           <Core />
         </main>
 
-        <section>
-          <cypherInfo />
-        </section>
+      
       </div>
 
-      <footer>
+      <footer className='footer'>
         <Footer />
       </footer>
     </>

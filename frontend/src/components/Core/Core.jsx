@@ -24,7 +24,7 @@ export default function Core() {
 
 
     const options = {
-        encrypt: ['caesar', 'atbash', 'vignere', 'transposition'],
+        encrypt: ['caesar', 'atbash', 'vigenere', 'transposition'],
         decrypt: ['caesar'],
         hash: ['md5', 'sha256']
     };
@@ -127,7 +127,7 @@ export default function Core() {
 
         <>
             <div className="corePresentation">
-                <h2 className='coreTitle'>Secure your text</h2>
+                <h2 className='coreTitle'>Secure text, instantly.</h2>
                 <p className='coreSubtitle'>Please, choose between our services</p>
             </div>
 

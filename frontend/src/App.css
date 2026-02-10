@@ -83,13 +83,14 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 5px;
+  padding: .4rem;
   border: none;
 }
 
 [data-theme="light"] {
   .header {
-    background-color: var(--complementary-white-n1);
+    background: linear-gradient(90deg, var(--complementary-white-n1), #F1F4FA 40%, var(--complementary-white-n1));
+    background-blend-mode: lighten;
   }
 }
 
@@ -101,6 +102,20 @@ button {
 
 }
 
+.content{
+  padding: 20px;
+  background-color: #090909;
+}
+
+[data-theme = "light"] .content{
+  background-color: var(--complementary-white-n1);
+}
+
+@media (min-width: 768px){
+  .content{
+    padding: 0px;
+  }
+}
 
 [data-theme="light"] {
   .mainHero {
@@ -159,9 +174,9 @@ button {
 @media (min-width: 768px) {
   .core {
     background: radial-gradient(ellipse 37% 50% at center, var(--accent-cyan), var(--primary-black) 70%);
-    padding-top: 2%;
     padding-left: 20%;
     padding-right: 20%;
+    padding-bottom: 2%;
   }
 
   [data-theme="light"] .core {
@@ -175,21 +190,54 @@ button {
   }
 }
 
-.hidden{
+.sectionInfo {
+  padding-top: 2%;
+  padding-left: 20%;
+  padding-right: 20%;
+  padding-bottom: 2%;
+  color: var(--primary-white);
+  background: url('/boxpattern4.png'), #08131E;
+  background-blend-mode: lighten;
+}
+
+.footer {
+  background-color: var(--primary-black);
+  color: var(--primary-white);
+  margin: 0;
+  text-align: center;
+  max-height: 16px;
+  align-items: center;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-top: .1px solid var(--primary-blue);
+}
+
+[data-theme="light"] .footer {
+  background: linear-gradient(90deg, var(--complementary-white-n1), #F1F4FA 40%, var(--complementary-white-n1));
+  background-blend-mode: lighten;
+  color: var(--accent-magenta-dark);
+  border-top: .1px solid var(--primary-white-light);
+}
+
+.hidden {
   display: none;
 }
 
 .error-form {
-  border: 1px solid transparent;     /* mantiene el borde base */
-  box-shadow: 0 0 0 1.3px var(--error);   
+  border: 1px solid transparent;
+  /* mantiene el borde base */
+  box-shadow: 0 0 0 1.3px var(--error);
 }
 
-[data-theme = "light"].error-form{
+[data-theme="light"].error-form {
   border: .6px solid transparent;
 }
-.error{
+
+.error {
   color: var(--error);
   font-size: 14px;
   opacity: .9;
 }
-
