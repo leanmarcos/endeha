@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import './sectionInfo.css';
+import './SectionInfo.css';
 
 export default function SectionInfo() {
     return (
