@@ -64,7 +64,7 @@ export default function Core() {
     const copyResult = () => {
         setIsCopied(true);
         try {
-            navigator.clipboard.writeText(result);            
+            navigator.clipboard.writeText(result);
 
         } catch (error) {
             console.log(error);
@@ -73,6 +73,13 @@ export default function Core() {
 
     const changingInput = (tempText) => {
         changeMessage(`${tempText}`);
+        changeError('');
+        changeErrorField('');
+        setIsCopied(false);
+    }
+
+    const changingKey = (tempKey) => {
+        changeKey(`${tempKey}`);
         changeError('');
         changeErrorField('');
         setIsCopied(false);
@@ -96,8 +103,7 @@ export default function Core() {
                 console.log('error data:', data);
                 changeError(data.message);
                 changeErrorField(data.field);
-                changeMessage('');
-            
+
 
                 throw new Error(data);
             }
@@ -166,7 +172,7 @@ export default function Core() {
                         <div className={action === 'hash' || selected === 'atbash' ? 'noKey' : "coreAdditional"}>
 
                             <div className="amount">
-                                <label htmlFor="" className={action === 'hash' || selected === 'atbash' ? 'hidden' : 'coreFormField'}>Encryption key <input className={errorField === 'key' ? 'error-form' : ''} type={selected === 'caesar' ? "number" : "text"} id='key' onChange={(e) => changeKey(e.target.value)} /></label>
+                                <label htmlFor="" className={action === 'hash' || selected === 'atbash' ? 'hidden' : 'coreFormField'}>Encryption key <input className={errorField === 'key' ? 'error-form' : ''} type={selected === 'caesar' ? "number" : "text"} id='key' onChange={(e) => changingKey(e.target.value)} /></label>
                                 <p className={errorField === 'key' ? 'error' : 'hidden'}>{error}</p>
                             </div>
 
