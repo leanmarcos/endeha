@@ -6,7 +6,7 @@ export function emptyInput(text) {
 }
 
 export function isWord(inputText) {
-    return typeof inputText === 'string' && /^[a-z]+$/.test(inputText);
+    return typeof inputText === 'string' && /^[a-zA-Z ]+$/.test(inputText);
 }
 
 export function isNumber(possibleNumber) {
