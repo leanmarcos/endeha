@@ -6,8 +6,12 @@ export function emptyInput(text) {
 }
 
 export function isWord(inputText) {
-    return typeof inputText === 'string' && /^[a-zA-Z ]+$/.test(inputText);
+    return (
+        typeof inputText === 'string' &&
+        /^(?=.*[a-zA-Z])[a-zA-Z ]+$/.test(inputText)
+    );
 }
+
 
 export function isNumber(possibleNumber) {
     return !isNaN(possibleNumber);
@@ -60,5 +64,5 @@ export const middleware404 = (req, res) => {
 }
 
 export const errorHandler = (err, req, res, next) => {
-    return sendError(res, 'UNEXPECTED_ERROR' , null);
+    return sendError(res, 'UNEXPECTED_ERROR', null);
 }
